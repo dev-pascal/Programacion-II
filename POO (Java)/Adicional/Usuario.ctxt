@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Usuario
+comment1.params=codigo\ nombre\ email
+comment1.target=Usuario(int,\ java.lang.String,\ java.lang.String)
+comment1.text=Constructores
+comment2.params=
+comment2.target=Usuario()
+comment3.params=
+comment3.target=int\ getCodigo()
+comment3.text=m\u00E9todos\ get
+comment4.params=
+comment4.target=java.lang.String\ getNombre()
+comment5.params=
+comment5.target=java.lang.String\ getEmail()
+comment6.params=codigo
+comment6.target=void\ setCodigo(int)
+comment6.text=m\u00E9todos\ set
+comment7.params=nombre
+comment7.target=void\ setNombre(java.lang.String)
+comment8.params=email
+comment8.target=void\ setEmail(java.lang.String)
+comment9.params=
+comment9.target=double\ CalcularFacturacion()
+comment9.text=M\u00E9todo\ polimorfico
+numComments=10

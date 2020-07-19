@@ -1,0 +1,58 @@
+PASAJE DE PARAMETROS (Assembler)
+
+REGISTROS:
+
+Por valor:
+mov AX, variable
+
+Por referencia:
+mov AX, offset variable
+
+PILA:
+
+Por valor:
+mov AX, variable
+push AX
+
+Por referencia:
+mov AX, offset variable
+push AX
+
+0 0000
+1 0001
+2 0010
+3 0011
+4 0100
+5 0101
+6 0110
+7 0111
+8 1000 
+9 1001
+A 1010
+B 1011
+C 1100 
+D 1101 
+E 1110
+F 1111
+
+3F01= 0011 1111 0000 0001
+1001 1111 1000 0000
+0100 1111 1100 0000 = 4FC0
+
+for i:=1 to 2 do  ( Cantidad de bits a desplazar a la derecha)
+   for j:=1 to (4-i) do
+	... 
+
+__
+
+ejemplo 8 bits : 0000 0001
+
+0000 0001 -> 0000 0010 -> 0000 0100 -> 0000 1000 -> 0001 0000 -> 0010 0000 -> 0100 0000 -> 1000 0000
+
+
+__
+5FFF= 0101 1111 1111 1111
+
+1001 0111 1000 0000= 9780
+
+0011 1111 0000 0001

@@ -1,0 +1,74 @@
+programa Ejercicio3-8
+procesos
+  proceso contarFlores (ES cant_flores: numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cant_flores:=cant_flores+1
+  fin
+  proceso Juega (ES cantflores: numero; E altura:numero; E base:numero; E altura1: numero; E base1:numero)
+  variables
+    h,b,h1,b1:numero
+  comenzar
+    h:=altura
+    h1:=altura1
+    b:=base
+    b1:=base1
+    Random(h,h,h1)
+    Random(b,b,b1)
+    Pos(h,b)
+    si HayFlorEnLaEsquina
+      contarFlores(cantflores)
+    h1:=altura
+    b1:=base
+    Pos(h1,b1)
+  fin
+areas
+  area: AreaP(1,1,1,1)
+  area1: AreaP(2,2,7,7)
+  area2: AreaP(8,2,13,7)
+  area3: AreaP(14,2,19,7)
+robots
+  robot robot1
+  variables
+    cantflores,altura,base,alt,bas: numero
+  comenzar
+    cantflores:=0
+    RecibirMensaje(altura,Rfiscal)
+    alt:=altura+5
+    bas:=2+5
+    repetir 3
+      Juega(cantflores,altura,2,alt,bas)  
+    EnviarMensaje(cantflores,Rfiscal)
+  fin
+  robot robotjefe
+  variables
+    flores1,flores2,flores3:numero
+  comenzar
+    flores1:=0
+    flores2:=0
+    flores3:=0
+    EnviarMensaje(2,R1)
+    RecibirMensaje(flores1,R1)
+    EnviarMensaje(8,R2)
+    RecibirMensaje(flores2,R2)
+    EnviarMensaje(14,R3)
+    RecibirMensaje(flores3,R3)
+    flores1:=flores1+flores2+flores3
+    Informar(flores1)
+  fin
+variables
+  R1: robot1
+  R2: robot1
+  R3: robot1
+  Rfiscal: robotjefe
+comenzar
+  AsignarArea(Rfiscal,area)
+  AsignarArea(R1,area1)
+  AsignarArea(R2,area2)
+  AsignarArea(R3,area3)
+  Iniciar(R1,2,2)
+  Iniciar(R2,8,2)
+  Iniciar(R3,14,2)
+  Iniciar(Rfiscal,1,1)
+fin

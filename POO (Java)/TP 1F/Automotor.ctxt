@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Automotor
+comment1.params=
+comment1.target=Automotor()
+comment1.text=Constructores
+comment10.params=
+comment10.target=double\ CalcularImpuesto()
+comment2.params=patente\ importeAdicional\ descripcion\ a\u00F1o\ importe\ propietario
+comment2.target=Automotor(java.lang.String,\ double,\ java.lang.String,\ int,\ double,\ Propietario)
+comment3.params=
+comment3.target=java.lang.String\ getPatente()
+comment3.text=--m\u00E9todos\ get--
+comment4.params=
+comment4.target=double\ getImporteAd()
+comment5.params=
+comment5.target=java.lang.String\ getDescripcion()
+comment6.params=patente
+comment6.target=void\ setPatente(java.lang.String)
+comment6.text=--m\u00E9todos\ set--
+comment7.params=importeAdicional
+comment7.target=void\ setImporteAd(double)
+comment8.params=descripcion
+comment8.target=void\ setDescripcion(java.lang.String)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+comment9.text=m\u00E9todos\ polim\u00F3rficos
+numComments=11

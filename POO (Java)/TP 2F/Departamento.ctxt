@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Departamento
+comment1.params=codigo\ direccion\ m2\ tipoVenta\ propietario\ expensas\ existeEncargado
+comment1.target=Departamento(java.lang.String,\ java.lang.String,\ double,\ java.lang.String,\ Propietario,\ double,\ boolean)
+comment1.text=Constructores
+comment2.params=
+comment2.target=Departamento()
+comment3.params=
+comment3.target=double\ getExpensas()
+comment3.text=M\u00E9todos\ get
+comment4.params=
+comment4.target=boolean\ getEncargado()
+comment5.params=expensas
+comment5.target=void\ setExpensas(double)
+comment5.text=M\u00E9todos\ set
+comment6.params=existeEncargado
+comment6.target=void\ setEncargado(boolean)
+comment7.params=
+comment7.target=double\ CalcularValor()
+comment7.text=M\u00E9todo\ polimorfico
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

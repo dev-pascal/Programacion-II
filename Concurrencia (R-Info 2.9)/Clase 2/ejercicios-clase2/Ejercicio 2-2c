@@ -1,0 +1,48 @@
+programa Ejercicio2-2c
+procesos
+  proceso contarFlores (ES cantflores: numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantflores:=cantflores+1
+  fin
+  proceso Recorrer (ES cantflores: numero; E altura:numero; E base:numero)
+  comenzar
+    repetir 2
+      repetir ((altura)-1)
+        contarFlores(cantflores)
+        mover
+      derecha
+      repetir ((base)-1)
+        contarFlores(cantflores)
+        mover
+      derecha 
+  fin
+areas
+  areaA: AreaP(2,2,4,6)
+  areaB: AreaP(6,2,8,6)
+  areaC: AreaP(10,2,12,6)
+  areaD: AreaP(14,2,16,6)
+robots
+  robot robot1
+  variables
+    cantflores: numero
+  comenzar
+    cantflores:=0
+    Recorrer(cantflores,5,3)
+  fin
+variables
+  R1: robot1
+  R2: robot1
+  R3: robot1
+  R4: robot1
+comenzar
+  AsignarArea(R1,areaA)
+  AsignarArea(R2,areaB)
+  AsignarArea(R3,areaC)
+  AsignarArea(R4,areaD)
+  Iniciar(R1,2,2)
+  Iniciar(R2,6,2)
+  Iniciar(R3,10,2)
+  Iniciar(R4,14,2)
+fin

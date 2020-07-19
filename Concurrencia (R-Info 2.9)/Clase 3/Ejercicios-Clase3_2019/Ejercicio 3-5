@@ -1,0 +1,69 @@
+programa Ejercicio3-5
+procesos
+  proceso contarFlores (ES cantflores: numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      cantflores:=cantflores+1
+  fin
+  proceso Recorrer (ES cantflores: numero; E altura:numero; E base:numero)
+  comenzar
+    repetir 2
+      repetir ((altura)-1)
+        contarFlores(cantflores)
+        mover
+      derecha
+      repetir ((base)-1)
+        contarFlores(cantflores)
+        mover
+      derecha 
+  fin
+areas
+  area: AreaP(1,1,1,1)
+  area1: AreaP(2,2,4,6)
+  area2: AreaP(6,2,8,6)
+  area3: AreaP(10,2,12,6)
+  area4: AreaP(14,2,16,6)
+  areaA: AreaP(12,10,14,14)
+  areaB: AreaP(16,10,18,14)
+  areaC: AreaP(20,10,22,14)
+  areaD: AreaP(24,10,26,14)
+robots
+  robot robot1
+  variables
+    cantflores,altura,base: numero
+  comenzar
+    cantflores:=0
+    RecibirMensaje(altura,jefe)
+    Pos(altura,10)
+    Recorrer(cantflores,5,3)
+  fin
+  robot robotjefe
+  comenzar
+    EnviarMensaje(12,R1)
+    EnviarMensaje(16,R2)
+    EnviarMensaje(20,R3)
+    EnviarMensaje(24,R4)
+  fin
+variables
+  R1: robot1
+  R2: robot1
+  R3: robot1
+  R4: robot1
+  jefe: robotjefe
+comenzar
+  AsignarArea(jefe,area)
+  AsignarArea(R1,area1)
+  AsignarArea(R2,area2)
+  AsignarArea(R3,area3)
+  AsignarArea(R4,area4)
+  AsignarArea(R1,areaA)
+  AsignarArea(R2,areaB)
+  AsignarArea(R3,areaC)
+  AsignarArea(R4,areaD)
+  Iniciar(jefe,1,1)
+  Iniciar(R1,2,2)
+  Iniciar(R2,6,2)
+  Iniciar(R3,10,2)
+  Iniciar(R4,14,2)
+fin

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=balanzaComercial
+comment1.params=monto\ cant
+comment1.target=balanzaComercial(double,\ int)
+comment2.params=
+comment2.target=balanzaComercial()
+comment3.params=
+comment3.target=void\ iniciarCompra()
+comment4.params=pesoEnKg\ precioPorKg
+comment4.target=void\ registrarProducto(double,\ double)
+comment5.params=
+comment5.target=double\ devolverMontoAPagar()
+comment6.params=
+comment6.target=java.lang.String\ devolverResumenDeCompra()
+numComments=7

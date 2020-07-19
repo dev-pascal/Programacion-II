@@ -1,0 +1,19 @@
+1a) La solución dada no funciona pues se está tratando de posicionar al
+robot1 en un área en donde el mismo se encuentra fuera del rango asignado.
+Para arreglar la solución de manera que funcione se puede cambiar el código
+del robot1 de la siguiente forma:
+
+comenzar
+    mover
+    mover
+    derecha
+    Pos(50,50) // Esta línea en sus parámetros la podemos cambiar por cualquier
+número que se encuentre dentro en la posición del área areaR1 (1,1,5,5), es decir
+dentro del cuadrado 5x5.
+    mover
+fin
+
+1b) Respuesta idem a 1a, además, en el código en las áreas parcialmente compartidas 
+en ningún momento se posicionan los dos robots (teniendo en cuenta que sea uno a la vez,
+no al mismo tiempo) es una mala asignación ya que no cumple con su objetivo, por lo que, 
+en su lugar sería más lógico declarar las áreas como áreas privadas.

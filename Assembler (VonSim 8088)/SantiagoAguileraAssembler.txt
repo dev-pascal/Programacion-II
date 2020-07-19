@@ -1,0 +1,55 @@
+ORG 1000H
+TABLA1 DW 2, 2, 5, 4, 3
+TABLA2 DW 1, 1, 5, 2, 1
+CEROS DB ?	
+org 3000h
+RESTA:push bx
+push cx 
+push dx
+mov bx, sp
+add bx, 2
+mov cx, [bx] ; R es CX
+add bx, 2
+mov bx, [bx] 
+mov dx, [bx]; V es DX
+sub dx, cx
+js REEMP
+jmp FINAL
+REEMP: mov dx, 0
+FINAL: mov bx, sp
+add bx, 4
+mov bx, [bx]
+mov [bx], dx
+pop dx
+pop cx
+pop bx
+ret
+ORG 2000h
+MOV AX, OFFSET TABLA1 ; R
+MOV BX, OFFSET TABLA2 ; V
+MOV DL, OFFSET CEROS - OFFSET TABLA2
+MOV DH, 0
+BUCLE: 	CMP DL, 0
+JZ FIN
+PUSH BX
+MOV CX, [BX] ; Enviar V
+MOV BX, AX ; Enviar R
+PUSH CX
+PUSH BX
+CALL RESTA
+POP BX
+POP CX
+; Volver de la subrutina
+CMP WORD PTR [BX], 0
+JZ Suma
+JMP Sigue
+Suma: INC DH
+Sigue: POP BX
+ADD BX, 2
+SUB DL, 2
+ADD AX, 2
+CMP DL, 0
+JNZ BUCLE
+FIN: 	MOV CEROS, DH
+HLT
+END 

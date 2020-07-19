@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Casa
+comment1.params=codigo\ direccion\ m2\ tipoVenta\ propietario\ tama\u00F1o_lote
+comment1.target=Casa(java.lang.String,\ java.lang.String,\ double,\ java.lang.String,\ Propietario,\ double)
+comment1.text=Constructores
+comment2.params=
+comment2.target=Casa()
+comment3.params=tama\u00F1o_lote
+comment3.target=void\ setTama\u00F1oLote(double)
+comment3.text=M\u00E9todo\ set
+comment4.params=
+comment4.target=double\ getTama\u00F1oLote()
+comment4.text=M\u00E9todo\ get
+comment5.params=
+comment5.target=double\ CalcularValor()
+comment5.text=M\u00E9todo\ polimorfico
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
